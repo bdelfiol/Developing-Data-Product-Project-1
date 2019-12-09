@@ -1,0 +1,23 @@
+---
+title: "Project 1"
+author: "Beatriz Del Fiol"
+date: "7 de dezembro de 2019"
+output:
+  slidy_presentation: default
+  beamer_presentation: default
+---
+
+Icecream shops - 9 december 2014
+```{r, echo=TRUE}
+library(leaflet)
+icecreamshops <- data.frame(name = c("Duetto"),
+                            lat = c(-23.533237),
+                            lng = c(-46.683135),
+popup=("Ice Cream Shop"))
+               
+icecreamshops %>%
+        leaflet() %>%
+        addTiles() %>%
+        addMarkers(lat=-23.533237, lng=-46.683135,
+        popup="Duetto Icecream shop")
+```
